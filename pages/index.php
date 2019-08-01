@@ -7,6 +7,9 @@
 ?>
 <html>
     <head>
+        <style type="text/css">
+           td { font-size: 14px; }
+        </style>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +23,8 @@
     <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="../assets/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
     <link href="../assets/css/sb-admin.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/icon.png">
 
 </head>
 
@@ -46,8 +51,38 @@
                         Login sebagai, <b><?php echo $_SESSION['nama']; ?></b>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Keluar</a></li>
-                    </ul>
+                            <li><a href="?id=10"><i class="fa fa-user fa-fw"></i> Edit Profil</a>
+                            </li>
+                            <li><a href="?id=25"><i class="fa fa-info fa-fw"></i> Tutorial</a>
+                            </li>
+                            
+                            <?php
+
+                            if ($_SESSION['level']=='admin')
+                            {
+
+                            ?>
+                            <li><a href="?id=101"><i class="fa fa-plus fa-fw"></i> Input Uang</a>
+                            </li>
+                            <li><a href="?id=16"><i class="fa fa-plus fa-fw"></i> Tambah Bendahara</a>
+                            </li>
+                            <li><a href="?id=26"><i class="fa fa-plus fa-fw"></i> Tambah User</a>
+                            </li>
+                             <li><a href="?id=29"><i class="fa fa-plus fa-fw"></i> Tambah Anggota</a>
+                            </li>
+                            <li><a href="?id=100"><i class="fa fa-minus-circle fa-fw"></i> Hapus Semua Data</a>
+                            </li>
+
+                            <?php
+                            }
+                            else
+                            {}
+                            ?>
+
+                            <li class="divider"></li>
+                            <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Keluar</a>
+                            </li>
+                        </ul>
                 </li>
             </ul>
 
@@ -74,9 +109,6 @@
                         </li>
                         <li>
                             <a href="index.php?id=21"><i class="fa fa-print fa-fw"></i><b> Cetak Kupon (Khusus Kuasa yang Hadir)</b></a>
-                        </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-gear fa-fw"></i><b> Pengaturan</b></a>
                         </li>
                     </ul>
                 </div>
