@@ -51,8 +51,6 @@
                         Login sebagai, <b><?php echo $_SESSION['nama']; ?></b>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                            <li><a href="?id=10"><i class="fa fa-user fa-fw"></i> Edit Profil</a>
-                            </li>
                             <li><a href="?id=25"><i class="fa fa-info fa-fw"></i> Tutorial</a>
                             </li>
                             
