@@ -1,5 +1,6 @@
 <?php
 
+
 	$dbhost = 'localhost';
 	$dbuser = 'root';
 	$dbpass = '';
@@ -31,6 +32,9 @@ if(isset($_POST['simpan']))
 	{
 		$no_kupon3 = $no_kupon2 +1;	
 	}
+
+	
+
 
 	$sql3= "update kuasa set no_kupon='$no_kupon3', status2='HADIR' where nak='$nak'";
 	$eksekusi = mysqli_query($konek,$sql3);

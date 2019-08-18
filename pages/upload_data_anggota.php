@@ -2,7 +2,7 @@
   error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 ?>
 
-  <br>
+<br>
   <div class="panel panel-primary">
     <div class="panel-heading">
       <b><center>Upload Data Anggota</center></b>
@@ -10,32 +10,31 @@
   </div>
   
     <h3>Ketentuan Upload Data</h3>
-        <ol>  
-            <li>Data berupa excel dengan extensi *.xls (1997-2003).</li>
-            <li>Baris pertama berisikan header tabel, secara berurutan id,nik,nama,nak.</li>
-            <li>Baris Selanjutnya berisikan data yang akan diinput.</li>
-            <li>Untuk Kolom ke 5 (setelah kolom nak) akan diabaikan.</li>
-        </ol>
+      <ol>  
+        <li>Data berupa excel dengan extensi *.xls (1997-2003).</li>
+        <li>Baris pertama berisikan header tabel, secara berurutan id,nik,nama,nak.</li>
+        <li>Baris Selanjutnya berisikan data yang akan diinput.</li>
+        <li>Untuk Kolom ke 5 (setelah kolom nak) akan diabaikan.</li>
+      </ol>
   
 <form name="myForm" id="myForm" onSubmit="return validateForm()" method="post" enctype="multipart/form-data">
     <input type="file" id="filepegawaiall" name="filepegawaiall">
     <br>
-        <center>
-        <input type="submit" name="submit" value="Import" class="btn btn-primary">
-        </center>
+    <center>
+      <input type="submit" name="submit" value="Import" class="btn btn-primary">
+    </center>
     <br>
     <hr>
     <label><input type="checkbox" name="drop" value="1" /> <u>Kosongkan table di database terlebih dahulu.</u> </label>
 </form>
-
 <?php 
-    if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 ?>
-    <div id="progress" style="width:500px;border:1px solid #ccc;"></div>
-    <div id="info"></div>
-    <?php
-        }
-    ?>
+<div id="progress" style="width:500px;border:1px solid #ccc;"></div>
+<div id="info"></div>
+<?php
+}
+?>
 
 <script type="text/javascript">
 //    validasi form (hanya file .xls yang diijinkan)
@@ -104,14 +103,17 @@ if(isset($_POST['submit'])){
 
       $pecah = explode("'", $nama);
 
+
 $tampil = implode("",$pecah);
 
 
 //      setelah data dibaca, masukkan ke tabel pegawai sql
-      $query = "INSERT INTO anggota (id,nak,nama,nik) VALUES ($id,$nak,'$tampil','$nik')";
+      $query = "INSERT into anggota (id,nak,nama,nik)values($id,$nak,'$tampil','$nik')";
       $hasil = mysql_query($query);
       
       flush();
+
+
 
     }
         

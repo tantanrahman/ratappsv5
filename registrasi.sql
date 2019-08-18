@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2019 at 06:39 PM
+-- Generation Time: Aug 18, 2019 at 11:21 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 5.6.34
 
@@ -331,7 +331,7 @@ CREATE TABLE `bendahara` (
 --
 
 INSERT INTO `bendahara` (`nak`, `nama`, `nik`) VALUES
-('9008', 'JOHN CENA', 'PEGKOP');
+('007', 'TANTAN', '007');
 
 -- --------------------------------------------------------
 
@@ -350,15 +350,6 @@ CREATE TABLE `kehadiran` (
   `jam` time NOT NULL,
   `cetak` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `kehadiran`
---
-
-INSERT INTO `kehadiran` (`waktu`, `nak`, `status`, `user`, `temp`, `id_kuasa`, `no_kupon`, `jam`, `cetak`) VALUES
-('2016-02-24 08:45:30', 843, 'HADIR', 'RIYADI DERAJAT', 0, 843, 3, '08:45:30', 1),
-('2019-08-01 23:36:07', 1143, 'HADIR', 'ADMIN APPS', 0, 1143, 4, '23:36:07', 0),
-('2016-02-23 16:35:09', 9019, 'HADIR', 'admin', 0, 9019, 1, '16:35:09', 1);
 
 -- --------------------------------------------------------
 
@@ -379,14 +370,6 @@ CREATE TABLE `kuasa` (
   `cetak` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `kuasa`
---
-
-INSERT INTO `kuasa` (`id_kuasa`, `nak`, `status`, `user`, `waktu`, `temp`, `no_kupon`, `jam`, `status2`, `cetak`) VALUES
-(1143, 839, 'KUASA', 'ADMIN APPS', '2019-08-01 23:36:07', 0, 5, '23:36:07', 'HADIR', 0),
-(9019, 900, 'KUASA', 'admin', '2016-02-23 16:35:09', 0, 2, '16:35:09', 'HADIR', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -405,6 +388,46 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`nak`, `nama`, `password`, `level`) VALUES
+('9012', 'METI KURNIASIH', '9012', 'user'),
+('9017', 'ASEP AHMAD', '9017', 'user'),
+('9019', 'RIYADI DERAJAT', '9019', 'admin'),
+('9020', 'RACHMAT HIDAYAT', '9020', 'user'),
+('9021', 'ASEP HIDAYAT', '9021', 'user'),
+('9023', 'DIMROH HASBUNA', '9023', 'user'),
+('9024', 'EDED DEDI', '9024', 'user'),
+('9028', 'YAN SAPTADI', '9028', 'user'),
+('9030', 'TETI SUKMAWATI', '9030', 'user'),
+('9031', 'MILA AMALIA', '9031', 'user'),
+('9042', 'HERI HERYADI', '9042', 'user'),
+('9043', 'MACHYAR', '9043', 'user'),
+('9044', 'BAMBANG WIRYAWAN', '9044', 'user'),
+('9045', 'DODI HIDAYAT', '9045', 'user'),
+('9046', 'RINI NURAENI', '9046', 'user'),
+('9055', 'MIRA DEWI KANTIKA', '9055', 'user'),
+('9057', 'ERNIYATI', '9057', 'user'),
+('9063', 'ROEBIANA LIBRANSYAH', '9063', 'user'),
+('9076', 'DADANG JUNAEDI', '9076', 'user'),
+('9085', 'YORI MULYANA', '9085', 'user'),
+('9087', 'YULIA KURAESIN', '9087', 'user'),
+('9090', 'DADANG SUPRIADI', '9090', 'user'),
+('9093', 'RIKA YATMIKASARI', '9093', 'user'),
+('9094', 'YANYAN KEMALUDIN', '9094', 'user'),
+('9096', 'IRWAN SAPTA', '9096', 'user'),
+('9098', 'CANDRA RIDWAN', '9098', 'user'),
+('9101', 'BUDIAR HAMID', '9101', 'user'),
+('9102', 'NANDANG SAKTIYANTO', '9102', 'user'),
+('9113', 'ASEP WAHYUDIN', '9113', 'user'),
+('9126', 'ATIE PURWATININGSIH', '9126', 'user'),
+('9130', 'SURYANI NURAFIAH', '9130', 'user'),
+('9132', 'ILYAS', '9132', 'user'),
+('9900', 'SURYO SANTOSA', '9900', 'user'),
+('9901', 'DEDI RUSNADI', '9901', 'user'),
+('9902', 'SUTRISNO', '9902', 'user'),
+('9903', 'ENDANG SUHANDI', '9903', 'user'),
+('9904', 'M. DONNA', '9904', 'user'),
+('9905', 'ARNES AGUSTIN', '9905', 'user'),
+('9906', 'AYI DEDI', '9906', 'user'),
+('9907', 'NURAISYAH', '9907', 'user'),
 ('admin', 'ADMIN APPS', 'admin', 'admin');
 
 --
