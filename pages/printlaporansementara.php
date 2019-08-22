@@ -7,7 +7,7 @@ $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = '';
 $koneksi = mysql_connect($dbhost, $dbuser, $dbpass);
-mysql_select_db('shu');
+mysql_select_db('registrasi');
 
 		$sql = "SELECT count(nak) as nak from anggota";
 		$ambildata = mysql_query( $sql, $koneksi);
