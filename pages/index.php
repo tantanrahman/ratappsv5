@@ -8,7 +8,7 @@
 <html>
     <head>
         <style type="text/css">
-           td { font-size: 14px; }
+           td { font-size: 13px; }
         </style>
 
     <meta charset="utf-8">

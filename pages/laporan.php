@@ -66,13 +66,13 @@ $record = mysqli_num_rows($ambildata);
 
 		if ($record>0)
 		{
-echo "<form method=post action=?id=999><table border='1' class='table-responsive table-bordered table'>
-<tr><th>ID</th><th>Nak</th><th>Nama</th><th>NIK</th><th>Status</th><th>No Kupon</th><th>User</th><th>ID Kuasa</th><th>Waktu</th>";
+echo "<form method=post action=?id=999><table border='1' class='table table-striped table-bordered table-hover'  id='table-data'>
+<thead><tr><th>ID</th><th>Nak</th><th>Nama</th><th>NIK</th><th>Status</th><th>No Kupon</th><th>User</th><th>ID Kuasa</th><th>Waktu</th>";
 if ($_SESSION['level']=='admin')
 	{
 echo "<th>Hapus</th>";
 	}
-echo "</tr>";
+echo "</tr></thead>";
 		}
 		else 
 		{
