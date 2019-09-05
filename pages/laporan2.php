@@ -7,9 +7,7 @@ $koneksi = mysql_connect($dbhost, $dbuser, $dbpass);
 $konek = mysqli_connect('localhost','root','','registrasi');
 mysql_select_db('registrasi');
 
-$sql = "SELECT * from kehadiran join anggota using (nak) order by jam";
-
- 
+$sql = "SELECT * from kehadiran join anggota using (nak) order by jam DESC";
 
 $ambildata = mysqli_query( $konek,$sql);
 $record = mysqli_num_rows($ambildata);

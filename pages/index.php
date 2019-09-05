@@ -24,7 +24,7 @@
     <link href="../assets/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
     <link href="../assets/css/sb-admin.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/icon.jpg">
 
 </head>
 
