@@ -128,9 +128,15 @@
     <script src="../assets/js/plugins/dataTables/dataTables.bootstrap.js"></script>
     <script src="../assets/js/sb-admin.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#table-data').dataTable();
-        });
+        // $(document).ready(function() {
+        //     $('#table-data').dataTable();
+        // });
+        $.fn.dataTable.ext.errMode = 'none';
+
+        $('#table-data').on( 'error.dt', function ( e, settings, techNote, message ) {
+        console.log( 'An error has been reported by DataTables: ', message );
+        } ) .DataTable();
+        $('#table-data').DataTable();
     </script>
 </body>
 
