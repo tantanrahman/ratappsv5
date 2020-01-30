@@ -79,12 +79,12 @@ if(isset($_POST['submit'])){
     };
     
 //    import data excel mulai baris ke-2 (karena tabel xls ada header pada baris 1)
-    for ($i=2; $i<=$baris; $i++)
+    for ($i=4; $i<=$baris; $i++)
     {
 //        menghitung jumlah real data. Karena kita mulai pada baris ke-2, maka jumlah baris yang sebenarnya adalah 
 //        jumlah baris data dikurangi 1. Demikian juga untuk awal dari pengulangan yaitu i juga dikurangi 1
-        $barisreal = $baris-1;
-        $k = $i-1;
+        $barisreal = $baris-21;
+        $k = $i-21;
         
 // menghitung persentase progress
         $percent = intval($k/$barisreal * 100)."%";
