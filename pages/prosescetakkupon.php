@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+date_default_timezone_set('Asia/Jakarta');
 require_once("dompdf/dompdf_config.inc.php");
 
 $dbhost = 'localhost';
@@ -111,7 +112,7 @@ $html =
   '<tr><td>Jumlah</td><td>:</td><td>0</td></tr>'.
   '<tr><td></td><td></td><td><font size=1>(Rupiah)</font></td></tr>'.
   '<tr><td>Untuk Pembayaran</td><td>:</td><td colspan=2>Uang Kehadiran RAT Tahun Buku '.$tahun.' atas nama :</td></tr>'.
-  '<tr><td></td><td></td><td colspan=2 align=left valign=top><font size=1>1.'.$row[nama].'('.$row[nik].', Dikuasakan ke No '.$no_kupon.')</td></tr>'.
+  '<tr><td></td><td></td><td colspan=2 align=left valign=top height=50px><font size=1>1.'.$row[nama].'('.$row[nik].', Dikuasakan ke No '.$no_kupon.')</td></tr>'.
   '<tr><td colspan=3></td><td align=center>Bandung, '.$waktu.'</td></tr>'.
   '<tr><td align=center>Yang Menerima,</td><td colspan=2 align=center>Verifikasi,</td><td align=center>Yang Membayarkan</td></tr>'.
   '<tr><td><br><br><br></td></tr>'.
@@ -121,18 +122,14 @@ $html =
   '<br>'.
   '<br>'.
   '<br>'.
-  '<br>'.
-  '<br>'.
-  '<br>'.
-  '<br>'.
   '<center><b><h3>TANDA TERIMA & REGISTRASI - RAT TAHUN BUKU '.$tahun.'</h2><b></center><br>'.
   '<table>'.
   '<tr><td>No. Registrasi</td><td>:</td><td>'.$row[no_kupon].'</td><td align=center bgcolor=silver>No Kupon : <br><font size=5><b>'.$row[no_kupon].'</b></font></td></tr>'.
   '<tr><td>Telah Terima Dari</td><td>:</td><td>KOPERASI JASA DADALI BANDUNG</td></tr>'.
   '<tr><td>Jumlah</td><td>:</td><td>0</td></tr>'.
   '<tr><td></td><td></td><td><font size=1>(Rupiah)</font></td></tr>'.
-  '<tr><td>Untuk Pembayaran</td><td>:</td><td colspan=2>Uang Kehadiran RAT Tahun Buku'.$tahun.' atas nama :</td></tr>'.
-  '<tr><td></td><td></td><td colspan=2 align=left valign=top><font size=1>1.'.$row[nama].'('.$row[nik].', Dikuasakan ke No '.$no_kupon.')</td></tr>'.
+  '<tr><td>Untuk Pembayaran</td><td>:</td><td colspan=2>Uang Kehadiran RAT Tahun Buku '.$tahun.' atas nama :</td></tr>'.
+  '<tr><td></td><td></td><td colspan=2 align=left valign=top height=50px><font size=1>1.'.$row[nama].'('.$row[nik].', Dikuasakan ke No '.$no_kupon.')</td></tr>'.
   '<tr><td colspan=3></td><td align=center>Bandung, '.$waktu.'</td></tr>'.
   '<tr><td align=center>Yang Menerima,</td><td colspan=2 align=center>Verifikasi,</td><td align=center>Yang Membayarkan</td></tr>'.
   '<tr><td><br><br><br></td></tr>'.

@@ -5,9 +5,7 @@
 		<center><b>Laporan Kehadiran</b></center>
 	</div>
 </div>
-
 	
-
 <br>
 
 <script type="text/javascript" src="1.2.2/ng_all.js"></script>

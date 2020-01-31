@@ -4,6 +4,7 @@
     {
     
     error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+    date_default_timezone_set('Asia/Jakarta');
 ?>
 <html>
     <head>
@@ -43,7 +44,6 @@
                 <a class="navbar-brand" href="index.php">Aplikasi RAT 2.1 v5.6</a>
             </div>
             <!-- /.navbar-header -->
-
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -118,7 +118,6 @@
             include 'switch.php';
             ?>
         </div>
-
     </div>
 
     <script src="../assets/js/jquery-1.10.2.js"></script>

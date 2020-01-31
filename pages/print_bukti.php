@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
+date_default_timezone_set('Asia/Jakarta');
 require_once("dompdf/dompdf_config.inc.php");
 
 $dbhost = 'localhost';
@@ -48,7 +49,7 @@ else
 
 
 $tahun = date("Y");
-$bulan = date("n");
+$bulan = date("m");
 switch ($bulan) {
   case '1':
   $bulan2="Januari";
@@ -90,7 +91,7 @@ switch ($bulan) {
   echo "Bulan salah!!";
     break;
 }
-$tanggal=date("j");
+$tanggal=date("d");
 $waktu = $tanggal." ".$bulan2." ".$tahun;
 mysql_select_db("registrasi");
 $sqlkuasa2 = "SELECT * from bendahara";
@@ -158,8 +159,6 @@ $moneyFormat = new moneyFormat();
 
 $terbilang = $moneyFormat->terbilang($bayar);
 $tahun = date('Y', strtotime('-1 year'));
-
-    
 
 $html =
   '<html><body>'.
