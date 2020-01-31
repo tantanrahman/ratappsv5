@@ -13,7 +13,7 @@ $konek = mysqli_connect('localhost','root','','registrasi');
 	$nak= $_POST['nak'];
 	$status= $_POST['status'];
 	$panjang = strlen($nak);
-	if ($panjang <= 4)
+	if ($panjang < 5)
 	{
 
 
